@@ -8,6 +8,24 @@
   
   <style>
     @import "//fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:300";
+    @import "//noahrezentes.github.io/fonts/Main/gotham-bold.ttf";
+    *
+    text-decoration: none,
+    color: inherit,
+    * a:hover,
+    text-decoration: line-through,
+    ::-moz-selection,
+    background: #bbbbbb,
+    body {
+      overflow: hidden;
+    }
+    *
+    text-decoration: none,
+    color: inherit,
+    * a:hover,
+    text-decoration: line-through,
+    ::selection,
+    background: #bbbbbb,
     body {
       overflow: hidden;
     }
@@ -22,10 +40,20 @@
     }
     section {
       display: block;
+      position: relative;
       width: 100vw;
       height: 100vh;
       border: none;
       overflow: hidden;
+    }
+    section a {
+      font-weight: bold;
+      font-style: italic;
+      text-decoration: none;
+      color: inherit;
+    }
+    section a:hover {
+      text-decoration: line-through;
     }
     section[id="1"] .introduction {
       position: absolute;
@@ -64,6 +92,20 @@
     section[id="1"] .introduction .bio .name {
       font-family: "Montserrat";
       font-size: 5.5vh;
+    }
+    section[id="6"] .afterword {
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 50vh;
+      width: 100vh;
+      text-align: center;
+      line-height: 8vh;
+      font-family: "Roboto Slab", Helvetica, sans-serif;
+      font-size: 4vh;
     }
     section iframe {
       display: block;
@@ -115,8 +157,17 @@
       section[id="1"] .introduction .bio .name {
         font-size: 4.5vh;
       }
+      section[id="6"] .afterword {
+        width: 90vw;
+        height: 50vw;
+        line-height: 8vw;
+        font-size: 4vw;
+      }
+      section[id="6"] .afterword .words {
+        position: absolute;
+        margin: auto;
+      }
     }
-
   </style>
 </head>
 <body>
