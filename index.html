@@ -1,7 +1,175 @@
 <head>
-<link rel="stylesheet" type="text/css" href="//noahrezentes.github.io/stylez.css">
+  <meta charset="UTF-8">
+  <meta name="author" content="Noah Rocket Rezentes">
+  <meta name="description" content="All kinds of info about Noah Rocket Rezentes.">
+  <meta name="keywords" content="noah rezentes, noah, rezentes, rocket, yung.in, yungin, yung, .in, in, dev">
+  <link rel="shortcut icon" type="image/png" href="//noahrezentes.github.io/favicon.png">
+  <title>Noah Rocket Rezentes</title>
+  
+  <style>
+    @import "//fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:300";
+    body {
+      overflow: hidden;
+    }
+    .container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+    section {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      overflow: hidden;
+    }
+    section[id="1"] .introduction {
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 120vh;
+      height: 50vh;
+      padding: 5vh;
+      box-sizing: border-box;
+    }
+    section[id="1"] .introduction .portrait {
+      display: inline-block;
+      position: relative;
+      width: 40vh;
+      height: 40vh;
+      background: url("http://yung.in/assets/portrait-2016.jpg");
+      background-repeat: no-repeat;
+      background-position: 0%;
+      background-size: 100%;
+      border-radius: 50%;
+    }
+    section[id="1"] .introduction .bio {
+      display: inline-block;
+      position: absolute;
+      margin: auto 5vh auto 5vh;
+      top: 0;
+      bottom: 0;
+      height: 4.5em;
+      width: auto;
+      font-family: "Roboto Slab", Helvetica, sans-serif;
+      font-size: 4vh;
+    }
+    section[id="1"] .introduction .bio .name {
+      font-family: "Montserrat";
+      font-size: 5.5vh;
+    }
+    section iframe {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      background: #f4f4f4;
+    }
+    @media screen and (max-aspect-ratio: 6/5) {
+      section[id="1"] .introduction {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 70vh;
+        padding: 5vh;
+        box-sizing: border-box;
+      }
+      section[id="1"] .introduction .portrait {
+        display: block;
+        position: relative;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 5vh;
+        width: 30vh;
+        height: 30vh;
+        background: url("http://yung.in/assets/portrait-2016.jpg");
+        background-repeat: no-repeat;
+        background-position: 0%;
+        background-size: 100%;
+        border-radius: 50%;
+      }
+      section[id="1"] .introduction .bio {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 30vh;
+        bottom: 0;
+        width: 80%;
+        height: 4.5em;
+        text-align: center;
+        font-size: 3vh;
+      }
+      section[id="1"] .introduction .bio .name {
+        font-size: 4.5vh;
+      }
+    }
+
+  </style>
 </head>
 <body>
-<div id="headline">This page is still in the works.</div>
-<div id="intra"><a href="http://noahrezentes.github.io">Go home,</a> Roger.</div>
+  <div class="container">
+    <section id="1">
+      <div class="introduction">
+        <div class="portrait"></div>
+        <div class="bio"> <span class="name">Noah Rocket Rezentes</span><br/>Hard-working, forward-thinking freelance web designer.</div>
+      </div>
+    </section>
+    <section id="2">
+      <iframe src="//yung.in/thing/2016/youtube-logo-concept"></iframe>
+    </section>
+    <section id="3">
+      <iframe src="//yung.in/thing/2016/google-assistant-animation-listening"></iframe>
+    </section>
+    <section id="4">
+      <iframe src="//yung.in/thing/2016/ups-redesign-concept"></iframe>
+    </section>
+    <section id="5">
+      <iframe src="//yung.in/thing/2016/blend-mode-parallax-demo"></iframe>
+    </section>
+  </div>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="http://guidobouman.github.io/jquery-panelsnap/jquery.panelSnap.js"></script>
+<script>
+  var options = {
+    $menu: false,
+    menuSelector: 'a',
+    panelSelector: '> section',
+    namespace: '.panelSnap',
+    onSnapStart: function(){},
+    onSnapFinish: function(){},
+    onActivate: function(){},
+    directionThreshold: 0,
+    slideSpeed: 300,
+    delay: 0,
+    easing: 'swing',
+    offset: 0,
+    navigation: {
+      keys: {
+        nextKey: true,
+        prevKey: false,
+      },
+      buttons: {
+        $nextButton: false,
+        $prevButton: false,
+      },
+      wrapAround: true
+    }
+  };
+
+  $('.container').panelSnap(options);
+</script>
